@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DigitalNest</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      line-height: 1.6;
+    }
+    header, nav, main, section, article, aside, footer {
+      padding: 1rem;
+    }
+    header {
+      background-color: #333;
+      color: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    nav a {
+      color: white;
+      margin: 0 10px;
+      text-decoration: none;
+    }
+    .products {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+    article {
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      padding: 1rem;
+      width: calc(33% - 2rem);
+      position: static;
+    }
+    article img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+    }
+    button {
+      background-color: #28a745;
+      color: white;
+      padding: 0.5rem 1rem;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    aside {
+      background-color: #f0f0f0;
+      margin: 1rem;
+      padding: 1rem;
+      border-left: 4px solid #007bff;      
+    }
+    footer {
+      background-color: #222;
+      color: white;
+      text-align: center;
+    }
+    .bold
+    {
+      font-weight: 10;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>DigitalNest</h1>
+    <nav>
+      <a href="#">Home</a>
+      <a href="#">Products</a>
+      <a href="#">About</a>
+      <a href="#">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="products">
+      <article>
+        <figure>
+          <img src="https://th.bing.com/th/id/OIP.LN74Qd5bEVM-J2_pmNNWAAHaLJ?rs=1&pid=ImgDetMain" alt="eBook Cover" width="400" height="500">
+          <figcaption><strong>Ultimate Guide to Freelancing</strong></figcaption>
+        </figure>
+        <p>A comprehensive eBook for aspiring freelancers.</p>
+        <p>Price: ₱119.99</p>
+        <button onclick="alert('Thank you for choosing this product from DigitalNest. Your digital download will be displayed after payment confirmation!')">Buy Now</button>
+      </article>
+
+      <article>
+        <figure>
+          <img src="https://i.pinimg.com/736x/f8/db/f4/f8dbf4a0fa7cbe6dc55c5fa511f9de1e.jpg" alt="Course Thumbnail" width="365" height="465">
+          <figcaption><strong>Web Development Bootcamp</strong></figcaption>
+        </figure>
+        <p>Master full-stack development from scratch.</p>
+        <p id=".bold">Price: ₱149.99</p>
+        <button onclick="alert('Thank you for choosing this product from DigitalNest. Your digital download will be displayed after payment confirmation!')">Buy Now</button>
+      </article>
+
+      <article>
+        <figure>
+          <img src="https://th.bing.com/th/id/OIP.lk9l9JJt9fhK_9HDaU31sQHaJk?rs=1&pid=ImgDetMain" alt="Template Thumbnail" width="400" height="500">
+          <figcaption><strong>Business Presentation Templates</strong></figcaption>
+        </figure>
+        <p>Professional templates to elevate your pitch.</p>
+        <p>Price: ₱129.99</p>
+        <button onclick="alert('Thank you for choosing this product from DigitalNest. Your digital download will be displayed after payment confirmation!')">Buy Now</button>
+      </article>
+    </section>
+
+    <aside>
+      <p><strong>Customer Testimonial:</strong> "DigitalNest has revolutionized the way I access digital products. Highly recommend!"</p>
+    </aside>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 DigitalNest. All rights reserved.</p>
+    <p>Follow us on: [Facebook] [Twitter] [Instagram]</p>
+  </footer>
+
+</body>
+</html>

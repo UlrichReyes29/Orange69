@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <style>
+        /* Basic styling for body */
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            background-color: #f4f4f4;
+        }
+
+        /* Header */
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #ee9b69;
+            color: white;
+            padding: 15px;
+        }
+
+        .header .toggle-btn {
+            background-color: #d88a5b;
+            border: none;
+            color: white;
+            padding: 10px;
+            font-size: 18px;
+            cursor: pointer;
+            display: none;
+        }
+
+        /* Sidebar */
+        .container {
+            display: flex;
+            flex: 1;
+        }
+
+        .sidebar {
+            width: 200px;
+            background-color: #f4b994;
+            color: white;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            transition: all 0.3s ease;
+        }
+
+        .sidebar a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            padding: 10px;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .sidebar a:hover {
+            background-color: #d88a5b;
+        }
+
+        /* Main Content */
+        .main-content {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(2, 200px);
+            gap: 15px;
+            padding: 20px;
+            flex: 1;
+            background: #f4f4f4;
+        }
+
+        .box {
+            background-color: white;
+            border-radius: 5px;
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 18px;
+            font-weight: bold;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .box:hover {
+            transform: translateY(-5px);
+            box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.15);
+        }
+
+        .box i {
+            margin-right: 10px;
+        }
+
+        footer {
+            background-color: #ee9b69;
+            text-align: center;
+            padding: 10px;
+            color: white;
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+            }
+
+            .sidebar {
+                width: 100%;
+                order: -1;
+                display: none;
+            }
+
+            .toggle-btn {
+                display: inline-block;
+            }
+
+            .main-content {
+                grid-template-columns: 1fr;
+            }
+
+            .box {
+                width: 100%;
+            }
+
+            .sidebar.active {
+                display: flex;
+            }
+        }
+
+        /* Sidebar toggle animation */
+        .sidebar.active {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <div class="header">
+        <span>Dashboard</span>
+        <button class="toggle-btn" onclick="toggleSidebar()">☰</button>
+    </div>
+
+    <div class="container">
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <a href="index.html">Home</a>
+            <a href="#">About</a>
+            <a href="#">Contact</a>
+            <a href="#">Services</a>
+            <a href="#">Settings</a>
+        </div>
+
+        <!-- Main Content -->
+        <div class="main-content">
+            <!-- Card 1: Sales -->
+            <div class="box">
+                <i>📊</i>
+                <div>
+                    <div>Sales</div>
+                    <div>$50,000</div>
+                </div>
+            </div>
+
+            <!-- Card 2: Users -->
+            <div class="box">
+                <i>👥</i>
+                <div>
+                    <div>Users</div>
+                    <div>1,234</div>
+                </div>
+            </div>
+
+            <!-- Card 3: Growth -->
+            <div class="box">
+                <i>📈</i>
+                <div>
+                    <div>Growth</div>
+                    <div>18%</div>
+                </div>
+            </div>
+
+            <!-- Card 4: Orders -->
+            <div class="box">
+                <i>🛒</i>
+                <div>
+                    <div>Orders</div>
+                    <div>1,567</div>
+                </div>
+            </div>
+
+            <!-- Card 5: Revenue -->
+            <div class="box">
+                <i>💰</i>
+                <div>
+                    <div>Revenue</div>
+                    <div>$75,000</div>
+                </div>
+            </div>
+
+            <!-- Card 6: Active Users -->
+            <div class="box">
+                <i>🔥</i>
+                <div>
+                    <div>Active Users</div>
+                    <div>890</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Your Company Name | <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
+    </footer>
+
+    <script>
+        // Toggle Sidebar visibility for mobile view
+        function toggleSidebar() {
+            const sidebar = document.querySelector('.sidebar');
+            sidebar.classList.toggle('active');
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Orange Extravaganza</title>
+    <style>
+        body{
+            position: static;
+            top: 0;
+            font-family: Arial, sans-serif;
+            line-height:  1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            
+           
+        }
+        header{
+            position: static;
+            background: #ee9b69;
+            color: white;
+            padding: 1rem;
+            text-align: center;
+            font-weight: bold;
+        }
+        nav {
+            position: sticky;
+            background: #f4b994;
+            padding: 0.5;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+        }
+       
+        nav a{
+            
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+            font-size: 18px;
+            
+        }
+        @media (max-width: 768px){
+            nav{
+                flex-direction: column;
+                text-align: center;
+            }
+            nav a{
+                margin: 10px 0;
+            }
+        }
+        main{
+            position: static;
+            top: 0;
+            display: flex;
+            flex-wrap: wrap;
+            margin: 20px;
+        }
+        section{
+            position: sticky;
+            flex: 2;
+            padding: 20px;
+            background: #ffebb0;
+            margin-right: 20px;
+            border-radius: 5px;
+            
+        }
+        aside{
+            position: sticky;
+            flex: 1;
+            padding: 20px;
+            background: #f0dc9f;
+            border-radius: 5px;            
+        }
+        
+        footer{ 
+            position: relative;
+            background: #ee9b69;
+            color: white;
+            text-align: center;
+            padding: 1rem;
+            margin-top: 20px;
+            font-weight: bold;
+        }
+        article{
+            padding-bottom: 20px;
+            border-bottom: 1px solid #ddd;
+        }
+        a.ex1:link{
+            color: blue;
+            text-decoration: none;
+        }
+        a.ex1:visited{
+            color: purple;
+
+        }
+        a.ex1:hover{
+            color: tomato;
+            text-decoration: underline;
+        }
+        a.ex1:active{
+            color: red;
+        }
+    </style>
+</head>
+<body>
+
+      <script>
+
+    document.addEventListener("DOMContentLoaded", function () {
+
+     alert("Welcome to my website!");
+
+    });
+
+   </script>
+
+    <header>
+        <h1>
+            Orange Extravaganza
+        </h1>
+        <p>
+            Each bite with popping flavour and juices
+        </p>
+    </header>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="About.html">About</a>
+        <a href="Dashboard.html">Dashboard</a>
+        <a href="Contact_us_Example.html">Contact us</a>
+        <a href="Gallery.html">Gallery</a>
+        
+    </nav>
+
+    <main>
+        <section>
+            <h2>
+                Introduction Oranges
+            </h2>
+            <article>
+                <h3>
+                    Oranges and their properties
+                </h3>
+                <p>
+                    Oranges are round, orange-colored citrus fruits that grow on trees. They belong to the genus Citrus and the family Rutaceae. They have leathery and oily rinds and juicy inner flesh. They originated from China, but are now grown in warm climates around the world. There are many varieties of oranges, some sweet and some sour.
+                </p>
+                <a class="ex1"href="#">Read more</a>
+                </article>
+
+                <article>
+                    <h3>
+                        Ponkan
+                    </h3>
+                    <p>Ponkan is a high-yield sweet Citrus cultivar with large fruits in the size of an orange. It is a citrus hybrid (mandarin × pomelo). The fruit is distinctive for its oblate shape, often having a short “collar” or neck. The sweet, tender, juicy flesh is pleasantly aromatic and has a rich, bright orange color.</p>
+                    <a class="ex1" href="#">Read more</a>
+                </article>
+        </section>
+        <aside>
+            <h2>What's new?!</h2>
+            <p>In a hot summer season, refresh yourself with healthy fruits. Natural and not processed. Oranges, Pomelo, Tangerine and ponkan in your glass to hydrate.</p>
+            <h3>Popular topics</h3>
+            <ul>
+                <li><a class="ex1" href="https://en.wikipedia.org/wiki/Orange_(fruit)" target="_blank">Oranges(Wikipedia)</a></li>
+                <li><a class="ex1" href="https://en.wikipedia.org/wiki/Ponkan" target="_blank">What is Ponkan? - Popular fruit from the Philippines</a></li>
+                <li><a class="ex1" href="https://en.wikipedia.org/wiki/Grapefruit" target="_blank">Grapefruit - Wikipedia</a></li>
+                <li><a class="ex1" href="#">Tangerine</a></li>
+
+            </ul>
+        </aside>
+    </main>
+       <footer>
+        <p>&copy; 2024 Orange Extravaganza All rights reserved.</p>
+       </footer>
+</body>
+</html>

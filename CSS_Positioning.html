@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Positioning example</title>
+    <style>
+        body{
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+        }
+        .container{
+            width: 90%;
+            max-width: 800px;
+            margin: auto;
+        }
+        .static-box{
+            position: static;
+            background: #29A7D9;
+            padding: 10px;
+            color: white;
+            margin-bottom: 10px;
+        }
+        .relative-box{
+            position: relative;
+            top: 20px;
+            left: 20px;
+            background: #027333;
+            padding: 10px;
+            color: white;
+        }
+        .absolute-box{
+            position: absolute;
+            top: 50px;
+            left: 50px;
+            background: #F2E527;
+            padding: 10px;
+            color: black;
+        }
+        .fixed-box{
+            position: fixed;
+            top: 0;
+            right: 0;
+            background: #0A5DA6;
+            padding: 10px;
+            color: white;
+            width: 150px;
+            text-align: center;
+        }
+        .sticky-box{
+            position: sticky;
+            top: 0;
+            background: #222059;
+            padding: 10px;
+            color: white;
+        }
+        .content{
+            height: 150vh;
+            background: #add;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="static-box">Static positon (Default)</div>
+        <div class="relative-box">Relative position(Moves relative to itself)</div>
+        <div class="sticky-box">Sticky position(Stays visible when scrolling)</div>
+
+        <div class="content">
+            Scroll down to see the sticky header effect.
+            <div class="absolute-box">Absolute position (Moves relative to nearest positioned ancestor)</div>
+        </div>
+    </div>
+
+    <div class="fixed-box">Fixed position(Always visible)</div>
+</body>
+</html>

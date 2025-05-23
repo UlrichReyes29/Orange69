@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        :root
+        {
+            --dark-blue: #222059;
+            --medium-blue: #0A5DA6;
+            --light-blue: #29A7D9;
+            --white: #FFFFFF;
+            --green: #027333;
+        }
+        .body
+        {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: var(--white);
+            color: var(--dark-blue);
+        }
+        .header
+        {
+            background: var(--medium-blue);
+            padding: 20px;
+            text-align: center;
+            color: var(--white);
+            font-size: 24px;
+        }
+        nav
+        {
+            display: flex;
+            justify-content: center;
+            background: var(--light-blue);
+            padding: 10px;
+        }
+        nav a
+        {
+            color: var(--white);
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 18px;
+        }
+        @media(max-width: 768px)
+        {
+            nav
+            {
+                flex-direction: column;
+                text-align: center;    
+            }
+            nav a
+            {
+                margin: 10px 0;
+
+            }           
+        }
+        .container
+        {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 20px;
+            padding: 20px;
+        }
+        @media(max-width: 768px)
+        {
+            .container
+            {
+                grid-template-columns: 1fr;
+            }
+        }
+        .main-content
+        {
+            background: var(--green);
+            color: var(--white);
+            padding: 20px;
+            border-radius: 8px;
+        }
+        .sidebar
+        {
+            background: var(--dark-blue);
+            color: var(--white);
+            padding: 20px;
+            border-radius: 8px;
+        }
+        footer
+        {
+            background: var(--dark-blue);
+            color: var(--white);
+            text-align: center;
+            padding: 10px;
+            margin-top: 20px;
+        }  
+    </style>
+</head>
+<body>
+    <header>
+        CSS layout example
+    </header>
+
+    <nav>
+        <a href="#">
+            Home
+        </a>
+        <a href="#">
+            About
+        </a>
+        <a href="#">
+            Services
+        </a>
+        <a href="#">
+            Contact
+        </a>
+    </nav>
+
+    <div class="container">
+        <div class="main-content">
+            <h2>Main content</h2>
+            <p>This is an example of a flexible layout using CSS grid.</p>
+        </div>
+        <div class="sidebar">
+            <h2>Sidebar</h2>
+            <p>Additional content or links go here.</p>
+        </div>
+    </div>
+    
+    <footer>@ 2024 CSS layout example</footer>
+</body>
+</html>
